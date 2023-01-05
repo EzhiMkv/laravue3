@@ -15,9 +15,7 @@
         <el-table-column prop="website" label="Website" />
         <el-table-column prop="website" label="Действия" >
             <template #default="scope">
-                <el-button size="small"
-                           @click="handleEdit(scope.$index, scope.row)"
-                >Редактировать</el-button>
+                <el-button size="small"><router-link :to="{name: 'companies.edit', params: {id: scope.row.id}}">Редактировать</router-link></el-button>
                 <el-button
                     size="small"
                     type="danger"
