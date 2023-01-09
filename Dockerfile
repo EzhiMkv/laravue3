@@ -9,6 +9,14 @@ RUN apt-get update \
 RUN curl -sS https://getcomposer.org/installer | php -- \
      --install-dir=/usr/local/bin --filename=composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get -y install nodejs
+
+
 WORKDIR /app
 COPY . .
+
+RUN npm install
+RUN npm run build
 RUN composer install
