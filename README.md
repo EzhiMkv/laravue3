@@ -8,7 +8,7 @@ docker-compose exec backend php artisan migrate
 
 Enjoy, app is ready to play with at http://0.0.0.0:8000/dashboard
 
-You'll need to register and login with your credentials.
+You'll need to register http://0.0.0.0:8000/register and login http://0.0.0.0:8000/login with your credentials.
 
 
 ![скрин](https://i.imgur.com/FR3MTwx.png "скрин")
